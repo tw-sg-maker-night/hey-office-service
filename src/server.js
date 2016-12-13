@@ -1,11 +1,16 @@
 import express from 'express'
+import bodyParser from 'body-parser'
 
 const app = express()
 
+app.use(bodyParser.json())
+
 app.post('/', (req, res) => {
+  const data = req.body.originalRequest.data
+
   let apiAIresponse = {
-    speech: 'Yes master Bruce!',
-    displayText: 'Yes master Bruce!',
+    speech: `Yes master Bruce! You said ${data.text}`,
+    displayText: `Yes master Bruce! You said ${data.text}`,
     data: {},
     contextOut: [],
     source: 'Somewhere only we know'
