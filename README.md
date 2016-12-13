@@ -7,8 +7,12 @@ Prerequisites:
 - [yarn package manager](https://github.com/yarnpkg/yarn)
 
 1. `yarn install`
-2. `yarn run build`
+2. `yarn build`
 3. `yarn start`
+
+Run tests: `yarn test`
+
+Start in dev mode with nodemon: `yarn start-dev`
 
 Deploy to Elastic Beanstalk:
 

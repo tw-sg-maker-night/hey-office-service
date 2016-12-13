@@ -6,13 +6,16 @@
   "scripts": {
     "build": "babel src -d build",
     "start": "node build/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start-dev": "nodemon --exec babel-node -- src/server.js",
+    "test": "mocha --recursive --compilers js:babel-register"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-preset-node6": "^11.0.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
