@@ -9,3 +9,9 @@ Prerequisites:
 1. `yarn install`
 2. `yarn run build`
 3. `yarn start`
+
+Deploy to Elastic Beanstalk:
+
+1. build
+2. zip `build/` and `package.json`
+3. upload to Elastic Beanstalk
