@@ -4,7 +4,7 @@ const givePresentHandler = (req, res, next) => {
   if (req.body.result.action !== 'give_present') {
     next();
   } else {
-    const response = `Yes master Bruce, I'd buy you a ${req.body.result.parameters.item} for Christmas`;
+    const response = `I'd buy you a ${req.body.result.parameters.item} for Christmas`;
     const givePresentResponse = {
       speech: response,
       displayText: response
