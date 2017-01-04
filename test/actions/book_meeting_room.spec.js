@@ -64,14 +64,10 @@ describe('bookMeetingRoom', () => {
       const expected = {
         title: 'Hey Office Test',
         room: 'ni hao',
-        start: '2017-01-05 15:00',
-        end: '2017-01-05 15:30'
+        start: '2017-01-05 15:00+08:00',
+        end: '2017-01-05 15:30+08:00'
       };
-      const reservation = createReservation(params);
-      expect(reservation.title).to.eql(expected.title);
-      expect(reservation.room).to.eql(expected.room);
-      expect(reservation.start).to.contain(expected.start);
-      expect(reservation.end).to.contain(expected.end);
+      expect(createReservation(params)).to.eql(expected);
     });
   });
 });
