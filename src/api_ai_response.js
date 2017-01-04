@@ -1,7 +1,7 @@
 const createApiAiResponse = (params) => {
   const baseResponse = {
-    speech: 'Yes master Bruce!',
-    displayText: 'Yes master Bruce!',
+    speech: 'Yes how can I help?',
+    displayText: 'Yes how can I help?',
     data: {},
     contextOut: [],
     source: 'Somewhere only we know'
