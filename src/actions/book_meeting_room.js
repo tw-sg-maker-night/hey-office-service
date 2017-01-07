@@ -1,4 +1,4 @@
-import moment from 'moment'
+import moment from 'moment-timezone'
 import createApiAiResponse from '../api_ai_response'
 
 export default function bookMeetingRoomHandler(aws) {
@@ -40,7 +40,7 @@ export default function bookMeetingRoomHandler(aws) {
 export function createReservation(params) {
   const title = 'Hey Office Test';
   const room = params.room;
-  const startMoment = moment(`${params.date} ${params.time}+08:00`);
+  const startMoment = moment(`${params.date} ${params.time}+08:00`).tz('Asia/Singapore');
   const start = startMoment.format("YYYY-MM-DD HH:mmZ");
   const duration = moment.duration(params.duration.amount, params.duration.unit[0]);
   const end = startMoment.add(duration).format("YYYY-MM-DD HH:mmZ");
